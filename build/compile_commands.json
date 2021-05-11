@@ -1,0 +1,7 @@
+[
+{
+  "directory": "D:/c_project/IOLibrary/build",
+  "command": "D:\\mingw\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe   -g -o CMakeFiles\\IOLibrary.dir\\IOLibrary.cpp.obj -c D:\\c_project\\IOLibrary\\IOLibrary.cpp",
+  "file": "D:/c_project/IOLibrary/IOLibrary.cpp"
+}
+]

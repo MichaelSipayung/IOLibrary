@@ -1,0 +1,3 @@
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E rm -f CMakeFiles\IOLibrary.dir/objects.a
+D:\mingw\mingw64\bin\ar.exe cr CMakeFiles\IOLibrary.dir/objects.a @CMakeFiles\IOLibrary.dir\objects1.rsp
+D:\mingw\mingw64\bin\x86_64-w64-mingw32-g++.exe -g -Wl,--whole-archive CMakeFiles\IOLibrary.dir/objects.a -Wl,--no-whole-archive -o IOLibrary.exe -Wl,--out-implib,libIOLibrary.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\IOLibrary.dir\linklibs.rsp
