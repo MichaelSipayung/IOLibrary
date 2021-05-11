@@ -111,7 +111,7 @@ int main(){
     list.numberPhone.push_back(+9762323);
     testVec.push_back(list);
     std::cout<<" Print vector with class type \t: [";
-    for (auto &i : testVec)
+  /*  for (auto &i : testVec)
     {
         for (auto &j : i.fullName)
         {
@@ -120,7 +120,7 @@ int main(){
         }
         
     }
-    
+    */
     std::cout<<"]"<<std::endl;
     
         
