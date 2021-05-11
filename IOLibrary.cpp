@@ -11,6 +11,7 @@ struct PersonInfo{
 struct phoneNumber
 {
     std::string name;
+    std::vector<std::string> fullName;
     std::vector<int> numberPhone;
 };
 
@@ -99,14 +100,28 @@ int main(){
     //string stream
     
 
-    std::vector<phoneNumber> testVec;
+    std::vector<phoneNumber> testVec; //vector with class type
     phoneNumber list;
     list.name="michael";
-    list.numberPhone.push_back(+628766);
-    list.numberPhone.push_back(+628767);
-    list.numberPhone.push_back(+628769);
+    list.fullName.push_back("michael");
+    list.fullName.push_back("daniel");
 
+    list.numberPhone.push_back(+7688655);
+    list.numberPhone.push_back(+8762323);
+    list.numberPhone.push_back(+9762323);
+    testVec.push_back(list);
+    std::cout<<" Print vector with class type \t: [";
+    for (auto &i : testVec)
+    {
+        for (auto &j : i.fullName)
+        {
+            std::cout<<"\tname \t: "  <<j <<std::endl;
+           
+        }
+        
+    }
     
+    std::cout<<"]"<<std::endl;
     
         
     std::string line,word;
