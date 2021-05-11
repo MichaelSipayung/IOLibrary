@@ -110,7 +110,7 @@ int main(){
     list.numberPhone.push_back(+8762323);
     list.numberPhone.push_back(+9762323);
     testVec.push_back(list);
-    std::cout<<" Print vector with class type \t: [";
+    //std::cout<<" Print vector with class type \t: [";
   /*  for (auto &i : testVec)
     {
         for (auto &j : i.fullName)
@@ -118,12 +118,22 @@ int main(){
             std::cout<<"\tname \t: "  <<j <<std::endl;
            
         }
+
+    }
+    std::cout<<"]"<<std::endl;
+    */
+    std::cout<<" using osstirngstream to show data [ ";
+    std::ostringstream stringStream;
+    for (auto &i :testVec )
+    {
+        for (auto &j : i.numberPhone)
+        {
+            std::cout<<"name \t: "<< i.name <<" " <<  "Number Phone \t: " <<j<<std::endl;
+        }
         
     }
-    */
     std::cout<<"]"<<std::endl;
-    
-        
+
     std::string line,word;
     std::vector<PersonInfo> people;
     while (std::getline(std::cin,line)) // reading entire record using getline
@@ -145,12 +155,11 @@ int main(){
     {
         for (auto &j : i.phones)
         {
-            std::cout<<"["<<i.name <<" : " <<j <<"]"<<std::endl;
+            formated<<"["<<i.name <<" : " <<j <<"]"<<std::endl;
         }
         
     }
     std::cout<<std::endl;
-
     phoneNumber num;
     num.numberPhone.push_back(+6281791);
     num.numberPhone.push_back(+6281792);
