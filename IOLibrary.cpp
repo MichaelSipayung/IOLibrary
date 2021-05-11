@@ -1,7 +1,22 @@
 #include <iostream>
 #include <fstream>
+#include <vector>
+#include <sstream>// header for string io
+
+struct PersonInfo{
+    std::string name;
+    std::vector<std::string> phones;
+};
+
+struct phoneNumber
+{
+    std::string name;
+    std::vector<int> numberPhone;
+};
+
+
 int main(){
-    std::cout<<" hello IOLibrary"<<std::endl;
+    //std::cout<<" hello IOLibrary"<<std::endl;
     int ival;
    
    /* std::cout<<" please input a number \t: " ;
@@ -20,9 +35,9 @@ int main(){
 */
 
     //flushing the buffer
-    std::cout<<" flushing the buffer  with endl "<<std::endl;
-    std::cout<<" flushing the buffer  with flush "<<std::flush;
-    std::cout<<" flushing the buffer with ends"<<std::ends;
+    //std::cout<<" flushing the buffer  with endl "<<std::endl;
+    //std::cout<<" flushing the buffer  with flush "<<std::flush;
+    //std::cout<<" flushing the buffer with ends"<<std::ends;
     
     std::cout<<std::unitbuf; // flush after every output
     std::cout<<"try1";
@@ -66,9 +81,70 @@ int main(){
     testMode<<"1.  java  "<<std::endl;
     testMode.close();
 
+    //testing for ifstrean
+    std::string showData;
+    
+    std::ifstream input("data.csv",std::ifstream::app);
+    if(!input){
+        std::cout<<" not exists "<<std::endl;
+    }
+    else{
+        input>>showData;
+    }
+    std::string temp;
+    std::cout<<std::endl;
+    std::cout<<showData<<std::endl;
+    input.close();
 
+    //string stream
+    
 
+    std::vector<phoneNumber> testVec;
+    phoneNumber list;
+    list.name="michael";
+    list.numberPhone.push_back(+628766);
+    list.numberPhone.push_back(+628767);
+    list.numberPhone.push_back(+628769);
 
+    
+    
+        
+    std::string line,word;
+    std::vector<PersonInfo> people;
+    while (std::getline(std::cin,line)) // reading entire record using getline
+    {
+        PersonInfo info;
+        std::istringstream record(line);
+        record>>info.name;
+        while (record>>word)
+        {
+            info.phones.push_back(word);
+        }
+        people.push_back(info);
+        
+    }
+
+    std::cout<<"\ntesting string stream " <<std::endl;
+    std::ostringstream formated;
+    for (const auto &i : people)
+    {
+        for (auto &j : i.phones)
+        {
+            std::cout<<"["<<i.name <<" : " <<j <<"]"<<std::endl;
+        }
+        
+    }
+    std::cout<<std::endl;
+
+    phoneNumber num;
+    num.numberPhone.push_back(+6281791);
+    num.numberPhone.push_back(+6281792);
+    for (auto &i : num.numberPhone)
+    {
+        std::cout<<i<<std::endl;
+    }
+       
+    
 
 
     
